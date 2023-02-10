@@ -5,12 +5,12 @@ from Crypto.PublicKey import RSA
 
 import AES
 
-
 def server():
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server_socket.bind((socket.gethostname(), 9998))
     server_socket.listen(5)
     print ("Server is listening....")
+    
     (server_pubkey, server_privkey) = rsa.newkeys(512)
 
     connection, address = server_socket.accept()

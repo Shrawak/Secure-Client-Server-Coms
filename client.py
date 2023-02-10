@@ -2,10 +2,10 @@ import socket
 import rsa
 import os
 
-# from Crypto.Cipher import AES
 from Crypto.PublicKey import RSA
 
 import AES
+    
 def client():
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     client_socket.connect((socket.gethostname(), 9998))
